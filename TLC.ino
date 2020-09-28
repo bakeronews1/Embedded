@@ -1,11 +1,11 @@
-const int redPin = 11; //Red led attached to pin 7
+const int redPin = 11; //Red led attached to pin 11
 
-const int yellowPin = 9; //Yellow1 led attached to pin 5
+const int yellowPin = 9; //Yellow1 led attached to pin 9
 
-const int greenPin = 10; //Green led attached to pin 6
+const int greenPin = 10; //Green led attached to pin 10
 
 
-const int buzzerPin = 12; // Buzzer pin attached to pin 11
+const int buzzerPin = 12; // Buzzer pin attached to pin 12
 
 const int pressPin = 8; // Positive pin of the Switch attached to pin 8
 
@@ -97,6 +97,8 @@ void loop(){
 // State of the red LED
 
 void redState(){ 
+ 
+ // Displaying the 15 minutes remaining time
   
   for (int k = 0; k <= 1; k++)
 
@@ -108,7 +110,7 @@ void redState(){
 
             k = 1;
     
-       for (int m = 0; m < 65; m++){
+       for (int m = 0; m < 65; m++){ // Delaying the Display so it is visible to us
 
         if( digitalRead(pressPin) == 0){
        
@@ -165,15 +167,17 @@ void redState(){
 
 // State of the Green LED
   
-void greenState(){ // State of the red LED
+void greenState(){ 
+ 
+ // Displaying the 15 minutes remaining time
   
   for (int k = 0; k <= 1; k++)
 
-   for (int n = 0; n <= 15; n++){ 
+   for (int n = 0; n <= 15; n++){  
 
     if( digitalRead(pressPin) == 0){
        
-        break; // Leave the redState when the Switch is pressed
+        break; // Leave the greenState when the Switch is pressed
 
         }
 
@@ -184,7 +188,7 @@ void greenState(){ // State of the red LED
 
             k = 1;
     
-       for (int m = 0; m < 65; m++){
+       for (int m = 0; m < 65; m++){ // Delaying the Display so it is visible to us
        
         digitalWrite(digit1, 1);
   
@@ -215,7 +219,7 @@ void greenState(){ // State of the red LED
       
      if( digitalRead(pressPin) == 0){
        
-        break; // Leave the redState when the Switch is pressed
+        break; // Leave the GreenState when the Switch is pressed
 
         }
 
@@ -227,7 +231,7 @@ void greenState(){ // State of the red LED
    
   }
  
-  digitalWrite(greenPin, LOW); // Turn off the red LED
+  digitalWrite(greenPin, LOW); // Turn off the Green LED
 
   noTone(buzzerPin); // Turn off the Buzzer
   
@@ -235,7 +239,9 @@ void greenState(){ // State of the red LED
 
 // State of the Yellow LED
 
-void yellowState(){   
+void yellowState(){ 
+ 
+ // Displaying the 15 minutes remaining time
 
   for (int k = 1; k <= 1; k++){
 
@@ -243,13 +249,13 @@ void yellowState(){
 
     if( digitalRead(pressPin) == 0){
        
-        break; // Leave the redState when the Switch is pressed
+        break; // Leave the YellowState when the Switch is pressed
 
         }
 
       digitalWrite(yellowPin,HIGH); 
 
-   for (int m = 0; m < 65; m++){
+   for (int m = 0; m < 65; m++){ // Delaying the Display so it is visible to us
        
         digitalWrite(digit1, 1);
   
@@ -280,7 +286,7 @@ void yellowState(){
       
      if( digitalRead(pressPin) == 0){
        
-        break; // Leave the redState when the Switch is pressed
+        break; // Leave the YellowState when the Switch is pressed
 
         }
 
@@ -292,7 +298,7 @@ void yellowState(){
    
   }
   }
-  digitalWrite(yellowPin, LOW); // Turn off the red LED
+  digitalWrite(yellowPin, LOW); // Turn off the Yellow LED
 
   noTone(buzzerPin); // Turn off the Buzzer
   

@@ -44,7 +44,7 @@ void setup(){
         
         pinMode(buzzerPin, OUTPUT);// Set the buzzerPin as an output
       
-        pinMode(pressPin, INPUT);// Set the pressPin as an output      
+        pinMode(pressPin, INPUT);// Set the pressPin as an input      
          
             
         pinMode(stPin, OUTPUT);// Set the latchPin as an output

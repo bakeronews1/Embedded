@@ -22,7 +22,7 @@ int digit1 = 7; // Digit 1 of 74HC595
 int digit2 = 6; // Digit 2 of 74HC595
 
 
-const byte Digit1[3] = {0b00000110, 0b10111111, 0b11111111}; // Data to Drive the Digit 1
+const byte Digit1[2] = {0b00000110, 0b10111111}; // Data to Drive the Digit 1
  
 const byte Digit2[16] = {0b01101101, 0b1100110, 0b01001111, 0b01011011, 0b00000110, 0b10111111, 0b01101111, 0b01111111, // Data to Drive the Digit 2
 
@@ -106,7 +106,7 @@ void redState(){
 
       digitalWrite(redPin,HIGH);
 
-       if ( n >= 6)
+       if ( n >= 6) // Displaying zero on digit 1
 
             k = 1;
     

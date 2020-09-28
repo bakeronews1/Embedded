@@ -1,6 +1,6 @@
 const int redPin = 11; //Red led attached to pin 11
 
-const int yellowPin = 9; //Yellow1 led attached to pin 9
+const int yellowPin = 9; //Yellow led attached to pin 9
 
 const int greenPin = 10; //Green led attached to pin 10
 

@@ -118,6 +118,8 @@ void redState(){
 
         }
        
+       // The Shift Register outputing to the 2 digits 7 segments display
+        
         digitalWrite(digit1, 1);
   
         digitalWrite(digit2, 0);
@@ -189,31 +191,33 @@ void greenState(){
             k = 1;
     
        for (int m = 0; m < 65; m++){ // Delaying the Display so it is visible to us
+        
+       // The Shift Register outputing to the 2 digits 7 segments display
        
-        digitalWrite(digit1, 1);
+          digitalWrite(digit1, 1);
   
-        digitalWrite(digit2, 0);
+          digitalWrite(digit2, 0);
 
         
-        digitalWrite(stPin, LOW);
+          digitalWrite(stPin, LOW);
         
-        shiftOut(dsPin, shPin, MSBFIRST, Digit1[k]);
+          shiftOut(dsPin, shPin, MSBFIRST, Digit1[k]);
         
-        digitalWrite(stPin, HIGH);
+          digitalWrite(stPin, HIGH);
         
-        delay(5);
+          delay(5);
  
-        digitalWrite(digit1, 0);
+          digitalWrite(digit1, 0);
   
-        digitalWrite(digit2, 1);
+          digitalWrite(digit2, 1);
         
-        digitalWrite(stPin, LOW);
+          digitalWrite(stPin, LOW);
         
-        shiftOut(dsPin, shPin, MSBFIRST, Digit2[n]);
+          shiftOut(dsPin, shPin, MSBFIRST, Digit2[n]);
         
-        digitalWrite(stPin, HIGH);
+          digitalWrite(stPin, HIGH);
         
-        delay(5);
+          delay(5);
 
        }
       
@@ -256,6 +260,8 @@ void yellowState(){
       digitalWrite(yellowPin,HIGH); 
 
    for (int m = 0; m < 65; m++){ // Delaying the Display so it is visible to us
+    
+    // The Shift Register outputing to the 2 digits 7 segments display
        
         digitalWrite(digit1, 1);
   
